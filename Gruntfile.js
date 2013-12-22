@@ -349,7 +349,7 @@ module.exports = function (grunt) {
       unit: {
         singleRun: true
       },
-      continuous: {
+      server: {
         autoWatch: true
       }
     }
