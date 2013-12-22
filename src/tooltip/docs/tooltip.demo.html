@@ -1,0 +1,58 @@
+<div class="bs-docs-section" ng-controller="TooltipDemoCtrl">
+
+  <div class="page-header">
+    <h1 id="tooltips">Tooltips <a class="small" href="//github.com/mgcrea/angular-strap/blob/master/src/directives/tooltip.js" target="_blank">tooltip.js</a>
+    </h1>
+    <code>mgcrea.ngStrap.tooltip</code>
+  </div>
+
+
+  <h2 id="tooltips-examples">Examples</h2>
+  <p>Add small overlays of content on hover, to any element for housing secondary information.</p>
+  <p>Append a <code>bs-tooltip</code> attribute to any element to enable the plugin.</p>
+
+  <h3 id="tooltips-usage">Live demo</h2>
+    <div class="form-group hide">
+      <label>Title</label>
+      <input type="text" class="form-control" ng-model="tooltip.title" placeholder="Title">
+    </div>
+    <pre class="bs-example-scope">$scope.tooltip = {{tooltip | json}};</pre>
+    <div class="bs-example" style="padding-bottom: 24px;" append-source>
+
+      <!-- Markup for a default tooltip with a scope passed as an object {title:''} -->
+      <p>Tight pants next level keffiyeh <a href="" bs-tooltip="tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown.</p>
+
+      <div class="input-group col-xs-5">
+        <span class="input-group-btn">
+          <!-- You can also use data-attrs to assign scope variables -->
+          <button class="btn btn-primary" type="button" data-trigger="click" data-animation="animation-flipX" title="{{tooltip.title}}" bs-tooltip="tooltip">Click me</button>
+        </span>
+        <input type="text" class="form-control" data-placement="right" data-container="body" placeholder="Focus to toggle tooltip" data-trigger="focus" bs-tooltip="tooltip">
+      </div>
+      <div class="checkbox">
+        <label data-placement="bottom" bs-tooltip="tooltip">
+          <input type="checkbox" ng-model="tooltip.checked"> Remember me
+        </label>
+      </div>
+
+    </div>
+  </h3>
+
+  <div class="bs-callout bs-callout-info">
+    <h4>Two-way data-binding</h4>
+    <p>To prevent databinding issues, "the rule of thumb is, if you﻿ use <code>ng-model</code> there has to be a dot somewhere." Miško Hevery.</p>
+  </div>
+
+  <h3>Scope methods</h3>
+  <p>Methods available inside the directive scope to toggle visibility.</p>
+
+  <h4>$show()</h4>
+  <p>Reveals the tooltip.</p>
+
+  <h4>$hide()</h4>
+  <p>Hides the tooltip.</p>
+
+  <h4>$toggle()</h4>
+  <p>Toggles the tooltip.</p>
+
+</div>

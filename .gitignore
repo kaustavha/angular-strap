@@ -5,5 +5,5 @@
 *.sublime-workspace
 bower_components/
 node_modules/
-docs/
+/docs/
 !.gitignore
